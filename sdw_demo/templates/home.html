@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css')}}" />
+    <title>SDW 2023</title>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/header.png') }}" alt="header"/>
+        <div class="barra_lateral">
+            <img src="{{ url_for('static', filename='img/barra_lateral.png') }}" alt="header"/>
+        </div>
+    </header>
+    <div class="content">
+        <div class="cliente">
+            <h1>Olá, {{ cliente }}</h1>
+            <h1>Ag {{ agencia }}  Cc {{ conta }}</h1>
+        </div>
+        <div class="dados" id="dados">
+            <span class="saldo" id="saldo">
+                <h2> Saldo Disponivel </h2>
+                <h2>R$ {{ saldo }}</h2>
+                
+            </span>
+            <span class="cartao" id="cartao">
+                <h2> Cartão Final </h2>
+                <h2>{{ card }}</h2>
+            </span>
+        </div>
+        <div class="mensagem" id="mensagem">
+            {% for texto in mensagens: %}
+                <span class="texto"><h4>{{ texto['description']}}</h4></span>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
