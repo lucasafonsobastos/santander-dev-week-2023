@@ -32,7 +32,7 @@ Agora acesse o pelo navegador https://localhost:5000
 
 ## Testes com Pipeline ETL
  
-Ao acessar nosso ambiente demo, passando como query um *id* como referência a um cadastro no nosso *banco de dados*, nossa página é carregada com as informação dispostas: 
+Ao acessar nosso ambiente demo, passando um *id* como cainho de referência a um cadastro no nosso *banco de dados*, nossa página é carregada com as informação dispostas: 
 > https://localhost:5000/1
 
 
